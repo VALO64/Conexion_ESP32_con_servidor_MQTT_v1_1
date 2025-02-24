@@ -4,18 +4,27 @@ bool rebote = 0; //Variable para el anti rebote
 bool togle = 0; //Variable para sujetar 
 
 int led = 5; //Led en el pin 5 de la ESP32
+int led_2 = 18; //Led en el pin 18 de la ESP32
 int btn = 21; //Boton en el pin 21 de la ESP32
 
 void setup_() {
 
   pinMode(led, OUTPUT); //Led configurado como salida
+  pinMode(led_2, OUTPUT); //Led 2 configurado como salida 
   pinMode(btn, INPUT); //Boton configurado como entrada 
+  digitalWrite(led, 0); //Estado inicial del led apagado 
+  digitalWrite(led_2, 1); //Estado inicial del led encendido
 }
 
 void turnLed(int v) { //Funcion para encender el led va a recibir un valor entero v 
 
-  if(v == 1)  digitalWrite(led, 1); //Si v es igual a 1 el led se va a encender 
-  else        digitalWrite(led, 0); //Si el v no es igual a 1 el led se va a apagar 
+  if(v == 1){
+  digitalWrite(led, 1);  
+  digitalWrite(led_2, 0); //Si v es igual a 1 el led se va a encender 
+  }else{
+    digitalWrite(led, 0); 
+    digitalWrite(led_2, 1);//Si el v no es igual a 1 el led se va a apagar
+  }     
 }
 
 void evalBtn() { //Funcion para evaluar el estado del boton 
