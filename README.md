@@ -1,5 +1,10 @@
 ## Conexion_ESP32_con_servidor_MQTT_v1_1
 
+[![ESP32](https://img.shields.io/badge/ESP-32-000000.svg?longCache=true&style=flat&colorA=CC101F)](https://www.espressif.com/en/products/socs/esp32)
+
+[![Wokwi](https://img.shields.io/badge/Wokwi-Simulador-blue)](https://wokwi.com/projects/423788809188749313)
+
+
 **Matierial**
   - ESP32
   - Node-Red
