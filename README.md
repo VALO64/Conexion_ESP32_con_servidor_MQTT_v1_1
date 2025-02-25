@@ -7,6 +7,9 @@
   - Calbes
   - 2 resistencia 220 ohms
   - 1 resistencia 1k ohms
+## **Diagrama**
+-------------------------------------------------------------------------------------------
+![image](https://github.com/user-attachments/assets/7a2fea84-d13b-461e-be00-d6bc56f2a0b8)
 
 ## **Circuito fisico**
 -------------------------------------------------------------------------------------------
