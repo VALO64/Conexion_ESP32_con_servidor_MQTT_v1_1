@@ -8,14 +8,10 @@
  ***************************************************************************
 */
 #include <Arduino.h>
-#include <WiFi.h>
+#include <WiFiManager.h>          //https://github.com/tzapu/WiFiManager WiFi Configuration Magic
 #include <PubSubClient.h>
-#include "/home/hero/Documents/Residencias/Conexion_ESP32_con_servidor_MQTT_v1_1/lib/ControlLed.h"
+#include <ControlLed.h> //Libreria para el control de los leds 
 
-//WiFi Setup
-const char* ssid = "IZZI-7E6C";     // WiFi ID
-const char* password = "50A5DC507E6C";  // WiFi Password
- 
  //MQTT Setup
 const char* mqttServer = "broker.hivemq.com";
 const int mqttPort = 1883;
@@ -24,20 +20,6 @@ const char* topic = "Itch1234"; // Publish topic
 
 WiFiClient espClient;
 PubSubClient client(espClient);
-
-
-void setup_wifi() {
-  delay(10);
-  WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println("");
-  Serial.println("WiFi connected");
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
-}
 
 void reconnect() {
   while (!client.connected()) {
@@ -84,16 +66,15 @@ void setup() {
   
   Serial.begin(115200);
 
-  // Initialize device.
-  setup_wifi();
-
+  WiFiManager wifiManager;
+  wifiManager.resetSettings(); //Esto solo es para modo de prueba, en el codigo final, hay que comentar
+  //first parameter is name of access point, second is the password
+  wifiManager.autoConnect("ESP32_Prueba", "Itch1234"); //Nombre del hotspot que se va a crear y su contrasena
+  Serial.println("Ya estas conectado"); //Impresion de mensaje
   //Setting MQTT server
   client.setServer(mqttServer, mqttPort); 
   client.setCallback(callback); // Define function which will be called when a message is received.
-
-  
-  setup_();
-
+  setup_(); //Invoca a setup_ que se encuentra en la libreria ControlLed.h
 }
 
 void loop() {
