@@ -23,8 +23,9 @@
 
 ## **UI con Node-Red**
 -------------------------------------------------------------------------------------------
-![image](https://github.com/user-attachments/assets/ea53877e-148e-4c1b-82ec-9e3047215fc1)
+![image](https://github.com/user-attachments/assets/5aed4bde-3745-4799-8760-ce5408752ad9)
 
 ## **Bloques utilizados en Node-Red**
 -------------------------------------------------------------------------------------------
-![image](https://github.com/user-attachments/assets/4675271a-457e-4aa8-84b0-7bf94321629b)
+![image](https://github.com/user-attachments/assets/eb1f265a-cfa4-4602-9dd4-0128a5ea2f5e)
+
