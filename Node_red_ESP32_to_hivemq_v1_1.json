@@ -1,0 +1,560 @@
+[
+    {
+        "id": "e3898e3849aa7267",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f10cfebd42e07e11",
+        "type": "ui_button",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "group": "a944f658167c5c93",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Encendido General",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-power-off ",
+        "payload": "On",
+        "payloadType": "str",
+        "topic": "/itch/labMeca/led/cmd/on",
+        "topicType": "msg",
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "b77b8045672c5ff0",
+                "c3c914edc61958db",
+                "48c67e2ebec3f177",
+                "566e34b9da07ecd3"
+            ]
+        ]
+    },
+    {
+        "id": "e055290197494fad",
+        "type": "ui_button",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "group": "a944f658167c5c93",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Apagado General",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-power-off ",
+        "payload": "Off",
+        "payloadType": "str",
+        "topic": "/itch/labMeca/led/cmd/off",
+        "topicType": "msg",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "f8199e9adf89c8ae",
+                "c3c914edc61958db",
+                "48c67e2ebec3f177",
+                "566e34b9da07ecd3"
+            ]
+        ]
+    },
+    {
+        "id": "b77b8045672c5ff0",
+        "type": "mqtt out",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "topic": "/itch/labMeca/led/cmd/on",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "da1509f0bb746ac9",
+        "x": 590,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f8199e9adf89c8ae",
+        "type": "mqtt out",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "topic": "/itch/labMeca/led/cmd/off",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "da1509f0bb746ac9",
+        "x": 590,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5b5f24f9de5717e1",
+        "type": "comment",
+        "z": "e3898e3849aa7267",
+        "name": "Botones",
+        "info": "Los botones de encendido tienen que llevar un topico\naun no se si esto es opcional o no, investigar",
+        "x": 120,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "681b2b746e444b4b",
+        "type": "comment",
+        "z": "e3898e3849aa7267",
+        "name": "Mensajes MQTT",
+        "info": "Especificar la ruta para mandar mensajes MQTT\nno es necesario marcar la casilla TTLS en el servidor publico",
+        "x": 580,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6de70c49bce46599",
+        "type": "mqtt out",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "topic": "/itch/labMeca/led/cmd/esp_sim/off",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "da1509f0bb746ac9",
+        "x": 620,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c74a08ad62f8b7da",
+        "type": "mqtt out",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "topic": "/itch/labMeca/led/cmd/esp_sim/on",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "da1509f0bb746ac9",
+        "x": 620,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "fae28514d706cd74",
+        "type": "ui_button",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "group": "a944f658167c5c93",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Encendido ESP simulador",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-power-off ",
+        "payload": "On1",
+        "payloadType": "str",
+        "topic": "/itch/labMeca/led/cmd/esp_sim/on",
+        "topicType": "msg",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "c74a08ad62f8b7da",
+                "48c67e2ebec3f177"
+            ]
+        ]
+    },
+    {
+        "id": "1c49b3e4c6a83d3b",
+        "type": "ui_button",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "group": "a944f658167c5c93",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Apagado ESP simulador",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-power-off ",
+        "payload": "Off1",
+        "payloadType": "str",
+        "topic": "/itch/labMeca/led/cmd/esp_sim/off",
+        "topicType": "msg",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "6de70c49bce46599",
+                "48c67e2ebec3f177"
+            ]
+        ]
+    },
+    {
+        "id": "a2eb7b899aeb6f0f",
+        "type": "mqtt out",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "topic": "/itch/labMeca/led/cmd/esp_sim_2/off",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "da1509f0bb746ac9",
+        "x": 610,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "57af067876301f69",
+        "type": "mqtt out",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "topic": "/itch/labMeca/led/cmd/esp_sim_2/on",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "da1509f0bb746ac9",
+        "x": 610,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "103fd27a15584aba",
+        "type": "ui_button",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "group": "a944f658167c5c93",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Encendido ESP simulador 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-power-off ",
+        "payload": "On2",
+        "payloadType": "str",
+        "topic": "/itch/labMeca/led/cmd/esp_sim_2/on",
+        "topicType": "msg",
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "57af067876301f69",
+                "566e34b9da07ecd3"
+            ]
+        ]
+    },
+    {
+        "id": "6332763f696fa912",
+        "type": "ui_button",
+        "z": "e3898e3849aa7267",
+        "name": "",
+        "group": "a944f658167c5c93",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Apagado ESP simulador 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-power-off ",
+        "payload": "Off2",
+        "payloadType": "str",
+        "topic": "/itch/labMeca/led/cmd/esp_sim_2/off",
+        "topicType": "msg",
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "a2eb7b899aeb6f0f",
+                "566e34b9da07ecd3"
+            ]
+        ]
+    },
+    {
+        "id": "c3c914edc61958db",
+        "type": "function",
+        "z": "e3898e3849aa7267",
+        "name": "Encendido leds general",
+        "func": "if(msg.payload == \"On\")\n    msg.payload = true;\nelse if(msg.payload == \"Off\")\n    msg.payload = false;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "3642c3735b5af007"
+            ]
+        ]
+    },
+    {
+        "id": "3642c3735b5af007",
+        "type": "ui_led",
+        "z": "e3898e3849aa7267",
+        "order": 1,
+        "group": "a944f658167c5c93",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 670,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "48c67e2ebec3f177",
+        "type": "function",
+        "z": "e3898e3849aa7267",
+        "name": "Encendido led ESP1",
+        "func": "if(msg.payload == \"On1\")\n    msg.payload = \"On1\";\nelse if(msg.payload == \"Off1\")\n    msg.payload = \"Off1\";\nelse if(msg.payload == \"On\")\n    msg.payload = true; //Encendido general\nelse if(msg.payload == \"Off\")\n    msg.payload = false; //Apagado general\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "29d37edc70220f90"
+            ]
+        ]
+    },
+    {
+        "id": "29d37edc70220f90",
+        "type": "ui_led",
+        "z": "e3898e3849aa7267",
+        "order": 5,
+        "group": "a944f658167c5c93",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "Off1",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "On1",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "08b112f72853c442",
+        "type": "ui_led",
+        "z": "e3898e3849aa7267",
+        "order": 9,
+        "group": "a944f658167c5c93",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "Off2",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "On2",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "566e34b9da07ecd3",
+        "type": "function",
+        "z": "e3898e3849aa7267",
+        "name": "Encendido leds ESP2",
+        "func": "if(msg.payload == \"On1\")\n    msg.payload = \"On2\";\nelse if(msg.payload == \"Off1\")\n    msg.payload = \"Off2\";\nelse if(msg.payload == \"On\")\n    msg.payload = true; //Encendido general\nelse if(msg.payload == \"Off\")\n    msg.payload = false; //Apagado general\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 540,
+        "wires": [
+            [
+                "08b112f72853c442"
+            ]
+        ]
+    },
+    {
+        "id": "5d53ba7e1b667c63",
+        "type": "ui_spacer",
+        "z": "e3898e3849aa7267",
+        "name": "spacer",
+        "group": "a944f658167c5c93",
+        "order": 4,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "aa1b9c843f71eac6",
+        "type": "ui_spacer",
+        "z": "e3898e3849aa7267",
+        "name": "spacer",
+        "group": "a944f658167c5c93",
+        "order": 8,
+        "width": "0",
+        "height": "0"
+    },
+    {
+        "id": "a944f658167c5c93",
+        "type": "ui_group",
+        "name": "MQTT_Prueba_Dash",
+        "tab": "5a0c38a7493d6827",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "da1509f0bb746ac9",
+        "type": "mqtt-broker",
+        "name": "HiveMQ_broker_publico",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5a0c38a7493d6827",
+        "type": "ui_tab",
+        "name": "Pruebas_MQTT_HiveMQ",
+        "icon": "Control MQTT",
+        "disabled": false,
+        "hidden": false
+    }
+]
